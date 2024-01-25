@@ -1,0 +1,26 @@
+.header {
+  display: inline;
+  gap: 3rem;
+  margin: 3rem 20rem;
+  text-align: center;
+  align-items: center;
+}
+
+.hero {
+  color: #191613;
+  font-size: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 7rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  background: #012a4b;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
