@@ -39,8 +39,8 @@
 .logo img {
   border-radius: 50%;
   object-fit: cover;
-  width: 5rem;
-  height: 5rem;
+  width: 7rem;
+  height: 7rem;
   filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
 }
 

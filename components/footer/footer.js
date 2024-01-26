@@ -1,8 +1,8 @@
 import {
   FaInstagram,
-  FaDribbble,
+  FaLinkedin,
   FaXTwitter,
-  FaYoutube,
+  FaFacebook,
 } from "react-icons/fa6";
 
 import logoImg from "@/assets/logo.jpg";
@@ -10,10 +10,26 @@ import Image from "next/image";
 
 const Footer = () => {
   const socialLinks = [
-    { label: "YouTube", icon: FaYoutube },
-    { label: "Instagram", icon: FaInstagram },
-    { label: "Twitter", icon: FaXTwitter },
-    { label: "Dribbble", icon: FaDribbble },
+    {
+      label: "LinkedIn",
+      icon: FaLinkedin,
+      website: "https://www.linkedin.com/company/sii-media",
+    },
+    {
+      label: "Instagram",
+      icon: FaInstagram,
+      website: "https://www.instagram.com/siimedia",
+    },
+    {
+      label: "Twitter",
+      icon: FaXTwitter,
+      website: "https://www.twitter.com/sii_media",
+    },
+    {
+      label: "Facebook",
+      icon: FaFacebook,
+      website: "https://www.facebook.com/SiiMedia.ae",
+    },
   ];
 
   const links = [
@@ -52,10 +68,13 @@ const Footer = () => {
             {socialLinks.map((socialLink, index) => {
               const Icon = socialLink.icon;
               return (
-                <Icon
+                <a
                   key={`social-${index}`}
-                  className="w-14 h-14 p-4 rounded-full bg-violet-400 hover:bg-white hover:text-black cursor-pointer"
-                />
+                  href={`${socialLink.website}`}
+                  target="_blank"
+                >
+                  <Icon className="w-14 h-14 p-4 rounded-full bg-customPink hover:bg-white hover:text-black cursor-pointer" />
+                </a>
               );
             })}
           </div>

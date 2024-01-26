@@ -5,12 +5,12 @@ function PostItem(props) {
 
   const { t } = useTranslation();
 
+  console.log(props.packageItem);
+
   const currentLocale = i18n.language;
 
   const { title_ar, title_en, price, features_en, features_ar } =
     props.packageItem;
-
-  const isFirst = props.isFirst;
 
   const features = currentLocale === "en" ? features_en : features_ar;
 
@@ -20,25 +20,21 @@ function PostItem(props) {
         <div className="text-gray-900 font-bold text-2xl sm:text-3xl md:text-4xl mb-2 text-center">
           {currentLocale === "en" ? title_en : title_ar}
         </div>
-
-        <p className="text-lg sm:text-xl md:text-2xl mb-2 font-bold text-center text-gray-900 my-4">
-          {t("price")} {price}
-        </p>
-        <button className="my-7 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full w-full">
-          {t("select")}
+        <button className="my-7 bg-customPink hover:bg-pink-950 text-white font-bold py-2 px-4 rounded-full w-full">
+          {price} AED
         </button>
         <div className="custom-scrollbar overflow-y-auto mb-4 flex-grow pb-3">
           <ul>
-            {features.map((item, index) => (
+            {features.map((item) => (
               <li
-                key={index}
+                key={item._id}
                 className={`${
                   currentLocale === "en"
                     ? "flex-row text-left"
                     : "flex-row-reverse text-right"
                 } flex items-center text-gray-700 my-2`}
               >
-                {isFirst && index % 2 === 0 ? (
+                {item.exists === false ? (
                   <svg
                     className="flex-shrink-0 fill-current w-4 h-4 mx-1 text-red-500 "
                     xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +52,7 @@ function PostItem(props) {
                   </svg>
                 )}
                 <span className="flex-1 text-sm sm:text-base md:text-lg">
-                  {item}
+                  {item.feature}
                 </span>
               </li>
             ))}

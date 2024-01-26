@@ -1,6 +1,6 @@
 import MainHeader from "@/components/main-header/main-header";
 import "./globals.css";
-import Footer from "@/components/footer/footer";
+import WhatsAppFAB from "@/components/fab/floatActionButton";
 
 export const metadata = {
   title: "Sii media",
@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <MainHeader></MainHeader>
         {children}
+        <WhatsAppFAB />
       </body>
     </html>
   );

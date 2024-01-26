@@ -4,13 +4,13 @@ module.exports = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
       env: {
-        hostApi: "https://sii-media-test.onrender.com",
+        hostApi: "https://sii-backend.onrender.com",
       },
     };
   }
   return {
     env: {
-      hostApi: "https://sii-media-test.onrender.com",
+      hostApi: "https://sii-backend.onrender.com",
     },
   };
 };

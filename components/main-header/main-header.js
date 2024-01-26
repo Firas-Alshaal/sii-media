@@ -22,12 +22,20 @@ export default function MainHeader() {
         </Link>
         <div className="flex flex-col sm:flex-row">
           <div className="mr-0 sm:mr-3 mb-2 sm:mb-0">
-            <h3 className="text-base sm:text-lg text-gray-200">
-              info@siimedia.net
-            </h3>
-            <h3 className="text-base sm:text-lg text-gray-200">
-              +971 54 561 5757
-            </h3>
+            <a href={`mailto:info@siimedia.net`}>
+              <h3 className="text-base sm:text-lg text-gray-200">
+                info@siimedia.net
+              </h3>
+            </a>
+            <a
+              href={`https://wa.me/+971545615757`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h3 className="text-base sm:text-lg text-gray-200">
+                +971 54 561 5757
+              </h3>
+            </a>
           </div>
           <div className="text-base sm:text-lg">
             <LanguageChanger className="p-0"></LanguageChanger>
