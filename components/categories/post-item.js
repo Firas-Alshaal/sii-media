@@ -17,7 +17,7 @@ function PostItem(props) {
   return (
     <div className="max-w-sm mx-auto h-screen rounded overflow-hidden shadow-lg bg-white p-6 sm:p-8 m-4">
       <div className="flex flex-col h-full">
-        <div className="text-gray-900 font-bold text-2xl sm:text-3xl md:text-4xl mb-2 text-center">
+        <div className="text-gray-900 font-bold text-xl sm:text-2xl md:text-3xl mb-2 text-center">
           {currentLocale === "en" ? title_en : title_ar}
         </div>
         <button className="my-7 bg-customPink hover:bg-pink-950 text-white font-bold py-2 px-4 rounded-full w-full">
