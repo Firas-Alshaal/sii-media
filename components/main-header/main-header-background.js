@@ -5,7 +5,7 @@ export default function MainHeaderBackground() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1300 400"
-          className="block w-full h-auto"
+          className="block w-full h-auto sm:w-5/6 md:w-full"
         >
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">

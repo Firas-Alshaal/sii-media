@@ -12,15 +12,26 @@ export default function MainHeader() {
       <MainHeaderBackground />
       <header className={classes.header}>
         <Link className={classes.logo} href="/">
-          <Image src={logoImg} alt="A plate with food on it" priority />
+          <Image
+            className="rounded-full object-cover w-20 h-20 filter drop-shadow-[0_0_0.75rem_rgba(0,0,0,0.5)]"
+            src={logoImg}
+            alt="A plate with food on it"
+            priority
+          />
           Sii Media
         </Link>
-        <div className="flex">
-          <div className="p-0 mr-3">
-            <h3 className={classes.h2}>info@siimedia.net</h3>
-            <h3 className={classes.h2}>+971 54 561 5757</h3>
+        <div className="flex flex-col sm:flex-row">
+          <div className="mr-0 sm:mr-3 mb-2 sm:mb-0">
+            <h3 className="text-base sm:text-lg text-gray-200">
+              info@jcdbc.net
+            </h3>
+            <h3 className="text-base sm:text-lg text-gray-200">
+              +971 54 561 5757
+            </h3>
           </div>
-          <LanguageChanger className="p-0"></LanguageChanger>
+          <div className="text-base sm:text-lg">
+            <LanguageChanger className="p-0"></LanguageChanger>
+          </div>
         </div>
       </header>
     </>
