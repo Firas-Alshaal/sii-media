@@ -23,7 +23,7 @@ export default function MainHeader() {
         <div className="flex flex-col sm:flex-row">
           <div className="mr-0 sm:mr-3 mb-2 sm:mb-0">
             <h3 className="text-base sm:text-lg text-gray-200">
-              info@jcdbc.net
+              info@siimedia.net
             </h3>
             <h3 className="text-base sm:text-lg text-gray-200">
               +971 54 561 5757
